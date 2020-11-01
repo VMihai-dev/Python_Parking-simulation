@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdf65335-8575-45d1-a95d-2be8b89eb86b" name="Default Changelist" comment="Basic server + client functionality added. Server listens for a connection and displays the time for a client that connects.">
+    <list default="true" id="bdf65335-8575-45d1-a95d-2be8b89eb86b" name="Default Changelist" comment="Switched to an echo client functionality with the ability of a client to hold a connection open.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
@@ -71,12 +71,20 @@
       <option name="project" value="LOCAL" />
       <updated>1604236472569</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Switched to an echo client functionality with the ability of a client to hold a connection open.">
+      <created>1604238288507</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604238288507</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic server + client functionality added. Server listens for a connection and displays the time for a client that connects." />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic server + client functionality added. Server listens for a connection and displays the time for a client that connects." />
+    <MESSAGE value="Switched to an echo client functionality with the ability of a client to hold a connection open." />
+    <option name="LAST_COMMIT_MESSAGE" value="Switched to an echo client functionality with the ability of a client to hold a connection open." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2743" y="418" key="Github.ShareDialog" timestamp="1604235886406">
@@ -87,25 +95,25 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2664" y="225" key="Github.UntrackedFilesDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604235909228" />
-    <state width="983" height="282" key="GridCell.Tab.0.bottom" timestamp="1604237590378">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1604239751565">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="983" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604237590378" />
-    <state width="983" height="282" key="GridCell.Tab.0.center" timestamp="1604237590377">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604239751565" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1604239751565">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="983" height="282" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604237590377" />
-    <state width="983" height="282" key="GridCell.Tab.0.left" timestamp="1604237590377">
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604239751565" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1604239751564">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="983" height="282" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604237590377" />
-    <state width="983" height="282" key="GridCell.Tab.0.right" timestamp="1604237590377">
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604239751564" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1604239751565">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="983" height="282" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604237590377" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604236478262">
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604239751565" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604238292650">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604236478262" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604238292650" />
   </component>
 </project>

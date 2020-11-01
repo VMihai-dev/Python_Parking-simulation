@@ -1,20 +1,35 @@
 # server.py
 import socket
 import time
+import signal
+import sys
 
+
+def signal_handler(sig, frame):
+    print('You pressed Ctrl+C!')
+    conn.close()
+    sys.exit(0)
+
+
+def handle_input(input):
+    if input.strip() == "This":
+        return "I found a match"
+    else:
+        return input
+
+
+signal.signal(signal.SIGINT, signal_handler)
 host = '127.0.0.1'      # Symbolic name meaning all available interfaces
-port = 6565     # Arbitrary non-privileged port
+port = 6568     # Arbitrary non-privileged port
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((host, port))
 s.listen(1)
 conn, addr = s.accept()
 print('Connected by', addr)
 while True:
-    data = conn.recv(1024)
+    data = conn.recv(1024).decode()
     if not data: break
-    conn.sendall(data)
-conn.close()
-
+    conn.send(handle_input(data).encode())
 
 """
 # create a socket object

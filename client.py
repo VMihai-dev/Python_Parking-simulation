@@ -3,9 +3,18 @@ import socket
 
 import socket
 import sys
+import signal
 
+
+def signal_handler(sig, frame):
+    print('You pressed Ctrl+C!')
+    s.close()
+    sys.exit(0)
+
+
+signal.signal(signal.SIGINT, signal_handler)
 host = '127.0.0.1'
-port = 6565                   # The same port as used by the server
+port = 6568                   # The same port as used by the server
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((host, port))
 while True:
