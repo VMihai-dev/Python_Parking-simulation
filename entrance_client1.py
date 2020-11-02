@@ -12,9 +12,14 @@ except socket.error as e:
 
 res = ClientMultiSocket.recv(1024)
 while True:
-    Input = input('Hey there: ')
-    ClientMultiSocket.send(str.encode(Input))
-    res = ClientMultiSocket.recv(1024)
-    print(res.decode('utf-8'))
+        if res.decode('utf-8').strip() == "You can come in":
+            ClientMultiSocket.send(str.encode("Coming in"))
+            res = ClientMultiSocket.recv(1024)
+            print(res.decode('utf-8'))
+            continue
+        Input = input()
+        ClientMultiSocket.send(str.encode(Input))
+        res = ClientMultiSocket.recv(1024)
+        print(res.decode('utf-8'))
 
 ClientMultiSocket.close()
