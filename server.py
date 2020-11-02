@@ -1,11 +1,16 @@
 import socket
 import os
 from _thread import *
+#from threading import Thread
 
 ServerSideSocket = socket.socket()
 host = '127.0.0.1'
-port = 2004
+port = 7007
 ThreadCount = 0
+threads = []
+a_lock = allocate_lock()
+parkingSpaces = 5
+
 try:
     ServerSideSocket.bind((host, port))
 except socket.error as e:
@@ -15,10 +20,16 @@ print('Socket is listening..')
 ServerSideSocket.listen(5)
 
 def handle_input(input):
-    if input.strip() == "This":
-        return "I found a match"
-    else:
-        return input
+    global parkingSpaces
+    with a_lock:
+        if input.strip() == "Enter":
+            if get_ident() == threads[0]:
+                parkingSpaces-=1
+                return "Entering the car park, spaces: ".__add__(str(parkingSpaces))
+        elif input.strip() == "Exit":
+            if get_ident() == threads[1]:
+                parkingSpaces+=1
+                return "Existing the car park, spaces: ".__add__(str(parkingSpaces))
 
 def multi_threaded_client(connection):
     connection.send(str.encode('Server is working:'))
@@ -33,8 +44,11 @@ def multi_threaded_client(connection):
 while True:
     Client, address = ServerSideSocket.accept()
     print('Connected to: ' + address[0] + ':' + str(address[1]))
-    start_new_thread(multi_threaded_client, (Client, ))
-    ThreadCount += 1
+    identifier = start_new_thread(multi_threaded_client, (Client, ))
+    threads.append(identifier)
+    ThreadCount+=1
+    print("This is the list of identidifers: ", threads)
+    print("This is native id: ", str(get_ident()))
     print('Thread Number: ' + str(ThreadCount))
 ServerSideSocket.close()
 
