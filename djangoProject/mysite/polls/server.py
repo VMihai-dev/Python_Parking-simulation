@@ -1,29 +1,14 @@
 import socket
 import os
 from _thread import *
+from .variables import *
+
 #from threading import Thread
-
-ServerSideSocket = socket.socket()
-host = '127.0.0.1'
-port = 7007
-ThreadCount = 0
-threads = []
-a_lock = allocate_lock()
-parkingSpaces = 5
-queue = 0
-
-try:
-    ServerSideSocket.bind((host, port))
-except socket.error as e:
-    print(str(e))
-
-print('Socket is listening..')
-ServerSideSocket.listen(5)
-
 def handle_input(input):
     global parkingSpaces
     global queue
     with a_lock:
+        print("I am thread id: ", str(get_ident()))
         if get_ident() == threads[0] or get_ident() == threads[1]:
             if input.strip() == "Enter":
                 if parkingSpaces > 0:
@@ -53,24 +38,35 @@ def multi_threaded_client(connection):
     connection.send(str.encode('Server is working:'))
     while True:
         data = connection.recv(1024).decode()
-        response = handle_input(data).encode()
+        print("This is the data we receive", data)
+        if data == "Enter" or data == "Exit" or data == "Coming in":
+            response = handle_input(data).encode()
+            connection.sendall(response)
         if not data:
+            print("I am breaking?")
             break
-        connection.sendall(response)
     connection.close()
 
-while True:
-    Client, address = ServerSideSocket.accept()
-    print('Connected to: ' + address[0] + ':' + str(address[1]))
-    identifier = start_new_thread(multi_threaded_client, (Client, ))
-    threads.append(identifier)
-    ThreadCount+=1
-    print("This is the list of identidifers: ", threads)
-    print("This is native id: ", str(get_ident()))
-    print('Thread Number: ' + str(ThreadCount))
-ServerSideSocket.close()
+def run_on_click():
+    global ThreadCount
+    try:
+        ServerSideSocket.bind((host, port))
+    except socket.error as e:
+        print(str(e))
 
+    print('Socket is listening..')
+    ServerSideSocket.listen(5)
 
+    while True:
+        Client, address = ServerSideSocket.accept()
+        print('Connected to: ' + address[0] + ':' + str(address[1]))
+        identifier = start_new_thread(multi_threaded_client, (Client, ))
+        threads.append(identifier)
+        ThreadCount+=1
+        print("This is the list of identidifers: ", threads)
+        print("This is native id: ", str(get_ident()))
+        print('Thread Number: ' + str(ThreadCount))
+    ServerSideSocket.close()
 
 """
 # server.py

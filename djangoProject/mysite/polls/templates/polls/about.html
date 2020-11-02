@@ -35,13 +35,25 @@
     <h1>Application is working</h1>
     <div>Press any entrance to enter the car park, and any exit to leave</div>
     <div class="divider2"></div>
-    <button type="button">Entrance 1!</button>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="run_script">Entrance 1!</button>
+    </form>
     <div class="divider"></div>
-    <button type="button">Entrance 2!</button>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="run_script2">Entrance 2!</button>
+    </form>
     <div class="divider"></div>
-    <button type="button">Exit 1!</button>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="run_script3">Exit 1!</button>
+    </form>
     <div class="divider"></div>
-    <button type="button">Exit 2!</button>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="run_script4">Exit 2!</button>
+    </form>
 </body>
 </html></h3>
 

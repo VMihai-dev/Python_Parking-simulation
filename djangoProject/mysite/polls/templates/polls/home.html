@@ -35,14 +35,29 @@
     <h1>Start up the client-server architecture</h1>
     <div>You will need to press the buttons in order</div>
     <div class="divider2"></div>
-    <button type="button">Click Me1!</button>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="run_script">Click Me1</button>
+    </form>
     <div class="divider"></div>
-    <button type="button">Click Me2!</button>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="run_script2">Click Me2</button>
+    </form>
     <div class="divider"></div>
-    <button type="button">Click Me3!</button>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="run_script3">Click Me3</button>
+    </form>
     <div class="divider"></div>
-    <button type="button">Click Me4!</button>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="run_script4">Click Me4</button>
+    </form>
     <div class="divider"></div>
-    <button type="button">Click Me5!</button>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="run_script5">Click Me5</button>
+    </form>
 </body>
 </html>
