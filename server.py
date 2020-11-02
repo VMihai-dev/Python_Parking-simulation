@@ -10,6 +10,7 @@ ThreadCount = 0
 threads = []
 a_lock = allocate_lock()
 parkingSpaces = 5
+queue = 0
 
 try:
     ServerSideSocket.bind((host, port))
@@ -21,15 +22,32 @@ ServerSideSocket.listen(5)
 
 def handle_input(input):
     global parkingSpaces
+    global queue
     with a_lock:
-        if input.strip() == "Enter":
-            if get_ident() == threads[0]:
+        if get_ident() == threads[0] or get_ident() == threads[1]:
+            if input.strip() == "Enter":
+                if parkingSpaces > 0:
+                    return "You can come in"
+                else:
+                    queue+=1
+                    return "Not enough spaces, you have to wait... queue size: ".__add__(str(queue))
+            elif input.strip() == "Coming in":
                 parkingSpaces-=1
-                return "Entering the car park, spaces: ".__add__(str(parkingSpaces))
-        elif input.strip() == "Exit":
-            if get_ident() == threads[1]:
-                parkingSpaces+=1
-                return "Existing the car park, spaces: ".__add__(str(parkingSpaces))
+                return "Car has parked, spaces available: ".__add__(str(parkingSpaces))
+            else:
+                return "I don't understand, try to \"Enter\""
+        elif get_ident() == threads[2] or get_ident() == threads[3]:
+            if input.strip() == "Exit":
+                if parkingSpaces > 4:
+                    return "There are no cars in the parking lot.."
+                elif queue > 0:
+                    queue-=1
+                    return "Car has left, there is a queue.. letting a car from the queue to come in".__add__(str(queue))
+                else:
+                    parkingSpaces += 1
+                    return "Car has left, spaces available: ".__add__(str(parkingSpaces))
+            else:
+                return "I don't understand, try to \"Exit\""
 
 def multi_threaded_client(connection):
     connection.send(str.encode('Server is working:'))
