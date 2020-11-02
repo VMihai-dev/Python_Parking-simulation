@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdf65335-8575-45d1-a95d-2be8b89eb86b" name="Default Changelist" comment="Multithreading functionality to connect multiple clients to server.">
+    <list default="true" id="bdf65335-8575-45d1-a95d-2be8b89eb86b" name="Default Changelist" comment="Automatic message exchange on successful park">
+      <change afterPath="$PROJECT_DIR$/djangoProject/mysite/polls/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrance_client1.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrance_client1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604245555912</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Automatic message exchange on successful park">
+      <created>1604281789501</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604281789501</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -102,7 +110,8 @@
     <MESSAGE value="Switched to an echo client functionality with the ability of a client to hold a connection open." />
     <MESSAGE value="handle_input function added and CTRL+C signal handler to close connection" />
     <MESSAGE value="Multithreading functionality to connect multiple clients to server." />
-    <option name="LAST_COMMIT_MESSAGE" value="Multithreading functionality to connect multiple clients to server." />
+    <MESSAGE value="Automatic message exchange on successful park" />
+    <option name="LAST_COMMIT_MESSAGE" value="Automatic message exchange on successful park" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2743" y="418" key="Github.ShareDialog" timestamp="1604235886406">
@@ -113,25 +122,25 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2664" y="225" key="Github.UntrackedFilesDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604235909228" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1604245487512">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1604282069436">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604245487512" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1604245487512">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604282069436" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1604282069436">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604245487512" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1604245487511">
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604282069436" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1604282069435">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604245487511" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1604245487512">
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604282069435" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1604282069436">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604245487512" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604277025973">
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604282069436" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604281793986">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604277025973" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604281793986" />
   </component>
 </project>
