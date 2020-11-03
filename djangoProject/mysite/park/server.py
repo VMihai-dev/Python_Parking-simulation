@@ -3,6 +3,8 @@ from _thread import *
 from . import variables as myvars
 
 
+# Handles the input received from the client
+# On "Entrance" command we occupy a space, on "Exit" we increase the number of available spaces
 def handle_input(message):
     a_lock = allocate_lock()
     with a_lock:
@@ -43,7 +45,6 @@ def multi_threaded_client(connection):
             response = handle_input(data).encode()
             connection.sendall(response)
         if not data:
-            print("I am breaking?")
             break
     connection.close()
 

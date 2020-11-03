@@ -4,6 +4,7 @@ from . import server, entrance_client1, entrance_client2, exit_client2, exit_cli
 from . import variables as myvars
 
 
+# Home page, define 5 buttons that start the server and clients
 def home(request):
     if request.method == 'POST' and 'server_script' in request.POST:
         server.run_on_click()
@@ -24,6 +25,7 @@ def home(request):
         return render(request, 'park/home.html')
 
 
+# Park page, talk with server on button press and update the values of spaces
 def park(request):
     context = {
         'parkingSpaces': myvars.parkingSpaces,
@@ -49,6 +51,7 @@ def park(request):
         return render(request, 'park/park.html', context)
 
 
+# We have to wait for a change before pushing the new template with the new values
 def wait_for_change(context):
     oldSpaces = context.get('parkingSpaces')
     oldQueue = context.get('queueSize')

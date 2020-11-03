@@ -6,6 +6,7 @@ def run_from_park():
     myvars.flagEntrance1 = 1
 
 
+# We send an Enter message, if "You can come in" then we occupy a space otherwise we wait in the queue
 def run_from_home():
     ClientMultiSocket = socket.socket()
     print('Waiting for connection response')
