@@ -4,15 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdf65335-8575-45d1-a95d-2be8b89eb86b" name="Default Changelist" comment="Integrated the local client-server application with Django web application. (Existing Bugs present and code needs cleaning)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/entrance_client1.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/polls/entrance_client1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/entrance_client2.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/polls/entrance_client2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/exit_client1.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/polls/exit_client1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/exit_client2.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/polls/exit_client2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/polls/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/polls/variables.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/polls/views.py" afterDir="false" />
+    <list default="true" id="bdf65335-8575-45d1-a95d-2be8b89eb86b" name="Default Changelist" comment="Cleaned code using pep8 checker">
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/mysite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/entrance_client1.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/entrance_client1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/entrance_client2.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/entrance_client2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/exit_client1.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/exit_client1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/exit_client2.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/exit_client2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/templates/polls/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/templates/polls/park.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/templates/polls/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/templates/polls/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/variables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/polls/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604348868549</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Cleaned code using pep8 checker">
+      <created>1604366417425</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1604366417425</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -172,7 +189,8 @@
     <MESSAGE value="Added an ugly html template layout." />
     <MESSAGE value="Moved all the server-client functionality into the Django project folder" />
     <MESSAGE value="Integrated the local client-server application with Django web application. (Existing Bugs present and code needs cleaning)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrated the local client-server application with Django web application. (Existing Bugs present and code needs cleaning)" />
+    <MESSAGE value="Cleaned code using pep8 checker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned code using pep8 checker" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2743" y="418" key="Github.ShareDialog" timestamp="1604235886406">
@@ -199,10 +217,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604282069436" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604348873557">
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604366421594">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604348873557" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604366421594" />
     <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604334112693" />
     <state x="2675" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1604322100616">
       <screen x="1920" y="0" width="1920" height="1040" />

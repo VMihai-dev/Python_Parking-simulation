@@ -1,0 +1,10 @@
+host = '127.0.0.1'
+port = 7011
+threadCount = 0
+threads = []
+parkingSpaces = 5
+queue = 0
+flagEntrance1 = 0
+flagEntrance2 = 0
+flagExit1 = 0
+flagExit2 = 0
