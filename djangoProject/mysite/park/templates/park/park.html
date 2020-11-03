@@ -7,17 +7,49 @@
     h1 {text-align: center;}
     p {text-align: center;}
     div {text-align: center;}
-    .button {
-        border: none;
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+        max-height: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .container img {
+        width: 100%;
+        height: 100%;
+    }
+    .container .btn {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
         color: white;
-        padding: 16px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
         font-size: 16px;
-        margin: 4px 2px;
-        transition-duration: 0.4s;
+        padding: 12px 24px;
+        border: none;
         cursor: pointer;
+        border-radius: 5px;
+    }
+    .buttonRed1 {
+        background-color: #f44336;
+        top:42%;
+        left:90%;
+    }
+    .buttonRed2 {
+        background-color: #f44336;
+        top:58%;
+        left:90%;
+    }
+    .buttonGreen1 {
+        background-color: #4CAF50;
+        top:42%;
+        left:15%;
+    }
+    .buttonGreen2 {
+        background-color: #4CAF50;
+        top:58%;
+        left:15%;
     }
     .divider{
         width:20px;
@@ -36,26 +68,21 @@
     <div>Press any entrance to enter the car park, and any exit to leave</div>
     <div>This are the available parking spaces: {{ parkingSpaces }}</div>
     <div>This is the queue: {{ queueSize }}</div>
-    <div class="divider2"></div>
+
+    <div class="container">
+    {% load static %}
+    <img src="{% static 'images/parking-garage-plan.png' %}" width="600" height="700"/>
     <form method="post">
         {% csrf_token %}
-        <button type="submit" name="entrance1_script">Entrance 1!</button>
+        <button class="btn buttonGreen1" type="submit" name="entrance1_script">Entrance1</button>
+        <button class="btn buttonRed1" type="submit" name="exit1_script">Exit1</button>
     </form>
-    <div class="divider"></div>
     <form method="post">
         {% csrf_token %}
-        <button type="submit" name="entrance2_script">Entrance 2!</button>
+        <button class="btn buttonGreen2" type="submit" name="entrance2_script">Entrance2</button>
+        <button class="btn buttonRed2" type="submit" name="exit2_script">Exit2</button>
     </form>
-    <div class="divider"></div>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit" name="exit1_script">Exit 1!</button>
-    </form>
-    <div class="divider"></div>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit" name="exit2_script">Exit 2!</button>
-    </form>
+    </div>
 </body>
 </html></h3>
 
