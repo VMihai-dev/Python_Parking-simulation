@@ -39,7 +39,7 @@ def multi_threaded_client(connection):
     while True:
         data = connection.recv(1024).decode()
         print("This is the data we receive", data)
-        if data == "Enter" or data == "Exit" or data == "Coming in":
+        if "Enter" in data or "Exit" in data or "Coming in" in data:
             response = handle_input(data).encode()
             connection.sendall(response)
         if not data:

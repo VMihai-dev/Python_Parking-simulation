@@ -31,15 +31,27 @@ def park(request):
     }
     if request.method == 'POST' and 'entrance1_script' in request.POST:
         entrance_client1.run_from_park()
+        wait_for_change(context)
         return render(request, 'park/park.html', context)
     elif request.method == 'POST' and 'entrance2_script' in request.POST:
         entrance_client2.run_from_park()
+        wait_for_change(context)
         return render(request, 'park/park.html', context)
     elif request.method == 'POST' and 'exit1_script' in request.POST:
         exit_client1.run_from_park()
+        wait_for_change(context)
         return render(request, 'park/park.html', context)
     elif request.method == 'POST' and 'exit2_script' in request.POST:
         exit_client2.run_from_park()
+        wait_for_change(context)
         return render(request, 'park/park.html', context)
     else:
         return render(request, 'park/park.html', context)
+
+
+def wait_for_change(context):
+    oldSpaces = context.get('parkingSpaces')
+    oldQueue = context.get('queueSize')
+    while oldSpaces == context.get('parkingSpaces') and oldQueue == context.get('queueSize'):
+        context['parkingSpaces'] = myvars.parkingSpaces
+        context['queueSize'] = myvars.queue

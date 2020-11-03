@@ -22,10 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdf65335-8575-45d1-a95d-2be8b89eb86b" name="Default Changelist" comment="Static files (Only way I could load an image)">
+    <list default="true" id="bdf65335-8575-45d1-a95d-2be8b89eb86b" name="Default Changelist" comment="Made the home page look a bit better">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/park/templates/park/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/templates/park/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/park/templates/park/park.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/templates/park/park.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/park/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoProject/mysite/park/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604412354053</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Made the home page look a bit better">
+      <created>1604414274039</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1604414274039</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,7 +246,8 @@
     <MESSAGE value="Added 2 variables in the template to show the available spaces + queue size in real time" />
     <MESSAGE value="Made &quot;park&quot; page look a bit better" />
     <MESSAGE value="Static files (Only way I could load an image)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Static files (Only way I could load an image)" />
+    <MESSAGE value="Made the home page look a bit better" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made the home page look a bit better" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2743" y="418" key="Github.ShareDialog" timestamp="1604235886406">
@@ -251,31 +258,35 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2664" y="225" key="Github.UntrackedFilesDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604235909228" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1604408362292">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1604416390858">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604408362292" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1604408362292">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604416390858" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1604416390858">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604408362292" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1604408362291">
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604416390858" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1604416390858">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604408362291" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1604408362292">
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604416390858" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1604416390858">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604408362292" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604412363909">
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604416390858" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604414277235">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604412363909" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604414277235" />
     <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604334112693" />
     <state x="2675" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1604322100616">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2675" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604322100616" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604415979118">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604415979118" />
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604407702864">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
