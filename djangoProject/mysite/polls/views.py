@@ -1,12 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
-from . import server, entrance_client1, exit_client2, exit_client1, entrance_client2
-#from .... import server
+from . import server, entrance_client1, entrance_client2, exit_client2, exit_client1
+# from django.http import HttpResponse, HttpResponseRedirect
 
-availableParking = 5
-context = {
-    'spaces': availableParking
-}
 
 def home(request):
     if request.method == 'POST' and 'run_script' in request.POST:
@@ -26,7 +21,7 @@ def home(request):
         return render(request, 'polls/home.html')
     else:
         return render(request, 'polls/home.html')
-# Create your views here.
+
 
 def about(request):
     if request.method == 'POST' and 'run_script' in request.POST:
@@ -43,4 +38,3 @@ def about(request):
         return render(request, 'polls/about.html')
     else:
         return render(request, 'polls/about.html')
-# Create your views here.

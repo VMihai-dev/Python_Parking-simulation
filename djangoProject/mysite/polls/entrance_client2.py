@@ -1,48 +1,28 @@
 import socket
-from .variables import *
+from . import variables as myvars
 
-ClientMultiSocket = socket.socket()
-host = '127.0.0.1'
-port = 7011
+
 def run_on_click2():
-    global flag2
-    #res = ClientMultiSocket.recv(1024)
-    #if res.decode('utf-8').strip() == "You can come in":
-    #    ClientMultiSocket.send(str.encode("Coming in"))
-    #    res = ClientMultiSocket.recv(1024)
-    #    print(res.decode('utf-8'))
-    #    return
-    #ClientMultiSocket = socket.socket()
-    #host = '127.0.0.1'
-    #port = 7010
-    #print('Waiting for connection response')
-    #try:
-    #    ClientMultiSocket.connect((host, port))
-    #except socket.error as e:
-    #    print(str(e))
-    flag2 = 1
+    myvars.flag2 = 1
 
 
 def run_on_click():
-    global flag2
     ClientMultiSocket = socket.socket()
-    host = '127.0.0.1'
-    port = 7011
     print('Waiting for connection response')
     try:
-        ClientMultiSocket.connect((host, port))
+        ClientMultiSocket.connect((myvars.host, myvars.port))
     except socket.error as e:
         print(str(e))
     res = ClientMultiSocket.recv(1024)
     while True:
         if res.decode('utf-8').strip() == "You can come in":
-            Input = "Coming in"
-            ClientMultiSocket.send(str.encode(Input))
+            message = "Coming in"
+            ClientMultiSocket.send(str.encode(message))
             res = ClientMultiSocket.recv(1024)
             print(res.decode('utf-8'))
-        if flag2 == 1:
-            Input = "Enter"
-            ClientMultiSocket.send(str.encode(Input))
+        if myvars.flag2 == 1:
+            message = "Enter"
+            ClientMultiSocket.send(str.encode(message))
             res = ClientMultiSocket.recv(1024)
             print(res.decode('utf-8'))
-            flag2 = 0
+            myvars.flag2 = 0

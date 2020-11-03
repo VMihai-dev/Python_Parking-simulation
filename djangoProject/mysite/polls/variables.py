@@ -1,11 +1,10 @@
 import socket
-import os
 from _thread import *
 
 ServerSideSocket = socket.socket()
 host = '127.0.0.1'
 port = 7011
-ThreadCount = 0
+threadCount = 0
 threads = []
 a_lock = allocate_lock()
 parkingSpaces = 5
