@@ -8,15 +8,15 @@
     p {text-align: center;}
     div {text-align: center;}
     .button {
+        background-color: #555555; /* Black */
         border: none;
         color: white;
-        padding: 16px 32px;
+        padding: 15px 32px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         margin: 4px 2px;
-        transition-duration: 0.4s;
         cursor: pointer;
     }
     .divider{
@@ -25,39 +25,42 @@
         display:inline-block;
     }
     .divider2{
-        width:500px;
-        height:200px;
+        width:250px;
+        height:100px;
         display:inline-block;
     }
     </style>
 </head>
 <body>
     <h1>Start up the client-server architecture</h1>
-    <div>You will need to press the buttons in order</div>
+    <div>By clicking the buttons you will start a server on localhost:7011 and will connect 4 clients to it</div>
+    <div>Instructions:</div>
+    <div>1) Click the buttons in order from 1-5</div>
+    <div>2) If not navigated automatically, go to "/park" page</div>
     <div class="divider2"></div>
     <form method="post">
         {% csrf_token %}
-        <button type="submit" name="server_script">Click Me1</button>
+        <button class="button" type="submit" name="server_script">Click Me 1st!</button>
     </form>
     <div class="divider"></div>
     <form method="post">
         {% csrf_token %}
-        <button type="submit" name="entrance1_script">Click Me2</button>
+        <button class="button" type="submit" name="entrance1_script">Click Me 2nd!</button>
     </form>
     <div class="divider"></div>
     <form method="post">
         {% csrf_token %}
-        <button type="submit" name="entrance2_script">Click Me3</button>
+        <button class="button" type="submit" name="entrance2_script">Click Me 3rd!</button>
     </form>
     <div class="divider"></div>
     <form method="post">
         {% csrf_token %}
-        <button type="submit" name="exit1_script">Click Me4</button>
+        <button class="button" type="submit" name="exit1_script">Click Me 4th!</button>
     </form>
     <div class="divider"></div>
     <form method="post">
         {% csrf_token %}
-        <button type="submit" name="exit2_script">Click Me5</button>
+        <button class="button" type="submit" name="exit2_script">Click Me 5th!</button>
     </form>
 </body>
 </html>
