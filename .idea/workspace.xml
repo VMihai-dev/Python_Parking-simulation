@@ -23,9 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdf65335-8575-45d1-a95d-2be8b89eb86b" name="Default Changelist" comment="Made the home page look a bit better">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/park/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/park/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/mysite/park/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/mysite/park/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,16 +54,21 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/djangoProject/mysite" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.github/workflows" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.github/workflows" />
       <recent name="C:\Users\Home\PycharmProjects\clientServerPark\djangoProject\mysite" />
       <recent name="C:\Users\Home\PycharmProjects\clientServerPark\djangoProject\mysite\park\static\images" />
       <recent name="C:\Users\Home\PycharmProjects\clientServerPark\djangoProject\mysite\mysite\static\images" />
       <recent name="C:\Users\Home\PycharmProjects\clientServerPark\djangoProject\mysite\park" />
-      <recent name="C:\Users\Home\PycharmProjects\clientServerPark\djangoProject\mysite\park\templates\park" />
     </key>
   </component>
   <component name="RunManager">
@@ -77,6 +84,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -95,6 +103,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604235372702</updated>
+      <workItem from="1611651551813" duration="41000" />
+      <workItem from="1611651650198" duration="474000" />
     </task>
     <task id="LOCAL-00001" summary="Basic server + client functionality added. Server listens for a connection and displays the time for a client that connects.">
       <created>1604236472569</created>
@@ -218,6 +228,9 @@
     <option name="localTasksCounter" value="18" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -228,6 +241,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic server + client functionality added. Server listens for a connection and displays the time for a client that connects." />
